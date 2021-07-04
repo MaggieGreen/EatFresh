@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="apple-touch-icon" href="image/icon_196.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="image/icon_76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="image/icon_120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="image/icon_152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/icon_180.png">
+    <link rel="apple-touch-icon" sizes="196x196" href="image/icon_196.png">
+    
+    <link rel="shortcut icon" sizes="76x76" href="image/icon_76.png">
+
+</head>
+
+<body>
+
+<!--#login-->
+<div data-role="page" id="login">
+    <div class="header">
+        <div class="login-logo"><img src="image/Logo2.png" alt="logo"></div>
+    </div>
+
+    <div data-role="content" class="ui-content center-parent">
+        <div class="center-child-login">
+            <div class="button-round login-button"><a href="#homeMenu" class="button-round">Sign In</a></div>
+            <br>
+            <div class="button-round login-button"><a href="#">Register</a></div>
+            <br>
+            <p class="text-white">connect with social account</p>
+        </div>
+
+    </div>
+</div>
+
+<!--#Home-->
+<div data-role="page" id="homeMenu">
+    <div class="header">
+        <!--<div class="menu-bar"><i class="fas fa-bars fa-2x"></i></div>-->
+        <div class="menu-bar">
+            <a href="#nav-panel-home">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+        </div>
+        <a href="#profile"><div class="averta"><img src="image/user.png" alt="face"></div></a>
+    </div>
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel-home" data-theme="a">
+        <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+            <li data-icon="delete" style="background-color:#111;">
+                <a href="#" data-rel="close">Close menu</a>
+            </li>
+            <li><a href="#storageFridge"><i class="fas fa-pizza-slice"></i> - Fridge storage</a></li>
+            <li><a href="#storageFreezer"><i class="fas fa-ice-cream"></i> - Freezer storage</a></li>
+            <li><a href=""><i class="fas fa-cog"></i> - Setting</a></li>
+            <li><a href=""><i class="fas fa-question-circle"></i> - Help</a></li>
+        </ul>
+    </div>
+
+    <div data-role="content" class="display-area">
+        <p>Sunday, Mar 10th</p>
+        <h1>Ready to eat fresh?</h1>
+        <a href="#storageFridge">
+            <div class="card bck-green">
+                <div class="card-img"><img src="image/storage.png" alt="fridge"></div>
+                <div class="card-text text-white">
+                    <h2>START YOUR STORAGE</h2>
+                    <p>Check the food in your refrigerator</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="card bck-orange">
+                <div class="card-img"><img src="image/scan.png" alt="scan"></div>
+                <div class="card-text text-white">
+                    <h2>SCAN YOUR RECEIPT</h2>
+                    <p>scan your reciepts to create food items</p>
+                </div>
+            </div>
+        </a>
+        <a href="#alert">
+            <div class="card bck-yellow">
+                <div class="card-img"><img src="image/alert.png" alt="fridge"></div>
+                <div class="card-text text-white">
+                    <h2>ALERT</h2>
+                    <p>Due day is approaching soon</p>
+                </div>
+            </div>
+        </a>
+        <div class="footer">
+            <a href="javascript:history.go(-1)"><div class="footer-block"><p><i class="fas fa-angle-double-left"></i> &nbsp;BACK</p></div></a>
+            <a href="#homeMenu"><div class="footer-block bck-green"><p><i class="fas fa-utensils"></i> &nbsp;HOME</p></div></a>
+            <a href="#profile"><div class="footer-block"><p><i class="fas fa-smile-wink"></i> &nbsp;PROFILE</p></div></a>
+        </div>
+    </div>
+</div>
+
+<!--#storage Fridge-->
+<div data-role="page" id="storageFridge">
+    <div class="header">
+        <div class="menu-bar">
+            <a href="#nav-panel-fridge">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+        </div>
+        <div class="averta"><a href="#edit"><i class="fas fa-plus-circle fa-2x"></i></a></div>
+    </div>
+
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel-fridge" data-theme="a">
+        <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+            <li data-icon="delete" style="background-color:#111;">
+                <a href="#" data-rel="close">Close menu</a>
+            </li>
+            <li><a href="#storageFridge"><i class="fas fa-pizza-slice"></i> - Fridge storage</a></li>
+            <li><a href="#storageFreezer"><i class="fas fa-ice-cream"></i> - Freezer storage</a></li>
+            <li><a href=""><i class="fas fa-cog"></i> - Setting</a></li>
+            <li><a href=""><i class="fas fa-question-circle"></i> - Help</a></li>
+        </ul>
+    </div>
+    <!--menu done-->
+
+    <div data-role="content" class="storage-area center-parent">
+        <div class="center-child-storage">
+                <div class="storage-button bck-green"><a href="#">Fridge</a></div><div class="storage-button"><a
+                    href="#storageFreezer">Freezer</a></div>
+                <br>
+                <a href="#vegetable">
+                    <div class="storage-card-active">
+                        <img src="image/icon2.png" alt="vegetable">
+                        <br>
+                        <p>Vegetable <br> 3 items</p>
+                    </div>
+                </a>
+                <div class="storage-card">
+                    <img src="image/icon1.png" alt="fruit">
+                    <br>
+                    <p>Fruit <br> 2 items</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon3.png" alt="dairy">
+                    <p>Dairy <br> 2 items</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon4.png" alt="eggs">
+                    <p>Eggs <br> 6 items</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon5.png" alt="bakery">
+                    <p>Bakery <br> 6 items</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon6.png" alt="drinks">
+                    <p>Drinks <br> 1 item</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon7.png" alt="seafood">
+                    <p>Seafood <br> 0 item</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon8.png" alt="meat">
+                    <p>Meat <br> 0 item</p>
+                </div>
+            <!--</div>-->
+
+        </div>
+
+        <div class="footer">
+            <a href="javascript:history.go(-1)"><div class="footer-block"><p><i class="fas fa-angle-double-left"></i> &nbsp;BACK</p></div></a>
+            <a href="#homeMenu"><div class="footer-block"><p><i class="fas fa-utensils"></i> &nbsp;HOME</p></div></a>
+            <a href="#profile"><div class="footer-block"><p><i class="fas fa-smile-wink"></i> &nbsp;PROFILE</p></div></a>
+        </div>
+    </div>
+</div>
+
+<!--#storage Freezer-->
+<div data-role="page" id="storageFreezer">
+    <div class="header">
+        <div class="menu-bar">
+            <a href="#nav-panel-freezer">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+        </div>
+        <div class="averta"><a href="#edit"><i class="fas fa-plus-circle fa-2x"></i></a></div>
+    </div>
+
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel-freezer" data-theme="a">
+        <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+            <li data-icon="delete" style="background-color:#111;">
+                <a href="#" data-rel="close">Close menu</a>
+            </li>
+            <li><a href="#storageFridge"><i class="fas fa-pizza-slice"></i> - Fridge storage</a></li>
+            <li><a href="#storageFreezer"><i class="fas fa-ice-cream"></i> - Freezer storage</a></li>
+            <li><a href=""><i class="fas fa-cog"></i> - Setting</a></li>
+            <li><a href=""><i class="fas fa-question-circle"></i> - Help</a></li>
+        </ul>
+    </div>
+    <!--menu done-->
+
+    <div data-role="content" class="storage-area center-parent">
+        <div class="center-child-storage">
+            <div class="storage-button"><a href="#storageFridge">Fridge</a></div><div class="storage-button bck-green"><a
+                href="#">Freezer</a></div>
+            <br>
+                <div class="storage-card">
+                    <img src="image/icon2.png" alt="vegetable">
+                    <br>
+                    <p>Vegetable <br> 0 item</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon1.png" alt="fruit">
+                    <br>
+                    <p>Fruit <br> 0 item</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon3.png" alt="dairy">
+                    <p>Dairy <br> 1 item</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon4.png" alt="eggs">
+                    <p>Eggs <br> 0 item</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon5.png" alt="bakery">
+                    <p>Bakery <br> 0 item</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon6.png" alt="drinks">
+                    <p>Drinks <br> 0 item</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon7.png" alt="seafood">
+                    <p>Seafood <br> 2 items</p>
+                </div>
+                <div class="storage-card">
+                    <img src="image/icon8.png" alt="meat">
+                    <p>Meat <br> 3 items</p>
+                </div>
+
+        </div>
+
+        <div class="footer">
+            <a href="javascript:history.go(-1)"><div class="footer-block"><p><i class="fas fa-angle-double-left"></i> &nbsp;BACK</p></div></a>
+            <a href="#homeMenu"><div class="footer-block"><p><i class="fas fa-utensils"></i> &nbsp;HOME</p></div></a>
+            <a href="#profile"><div class="footer-block"><p><i class="fas fa-smile-wink"></i> &nbsp;PROFILE</p></div></a>
+        </div>
+    </div>
+</div>
+    
+<!--#profile-->
+<div data-role="page" id="profile">
+    <div class="header">
+        <div class="menu-bar">
+            <a href="#nav-panel-profile">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+        </div>
+        <!--<div class="averta"><a href=""><i class="fas fa-plus-circle fa-2x"></i></a></div>-->
+    </div>
+
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel-profile" data-theme="a">
+        <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+            <li data-icon="delete" style="background-color:#111;">
+                <a href="#" data-rel="close">Close menu</a>
+            </li>
+            <li><a href="#storageFridge"><i class="fas fa-pizza-slice"></i> - Fridge storage</a></li>
+            <li><a href="#storageFreezer"><i class="fas fa-ice-cream"></i> - Freezer storage</a></li>
+            <li><a href=""><i class="fas fa-cog"></i> - Setting</a></li>
+            <li><a href=""><i class="fas fa-question-circle"></i> - Help</a></li>
+        </ul>
+    </div>
+    <!--menu done-->
+
+    <div data-role="content">
+        <div class="center-parent">
+            <div class="profile-img"><img src="image/biguser.png" alt="profile"></div>
+        </div>
+        <div class="center-parent">
+            <h2>Hello, Jane</h2>
+        </div>
+        <br><br>
+        <div >
+            <h2>PREFERENCE WINNER</h2>
+            <p>Purchase more than 100 specific types</p>
+            <div class="winner"><img src="image/bag1.png" alt="winner"></div>
+            <div class="winner"><img src="image/bag2.png" alt="winner"></div>
+            <div class="winner"><img src="image/bag3.png" alt="winner"></div>
+            
+            <br>
+            <h2>SAVING FOOD</h2>
+            <p>No food entry alert page in one week</p>
+            <div class="winner"><img src="image/bag4.png" alt="winner"> <button class="winner-tag bck-green"><i class="fas fa-times fa-sm"></i> 5</button> </div>
+            <div class="winner"><img src="image/bag5.png" alt="winner"> <button class="winner-tag"><i class="fas fa-times fa-sm"></i> 30</button> </div>
+            <div class="winner"><img src="image/bag6.png" alt="winner"> <button class="winner-tag"><i class="fas fa-times fa-sm"></i> 50</button> </div>
+            <br><br><br><br><br><br><br>
+        </div>
+
+        <div class="footer">
+            <a href="javascript:history.go(-1)"><div class="footer-block"><p><i class="fas fa-angle-double-left"></i> &nbsp;BACK</p></div></a>
+            <a href="#homeMenu"><div class="footer-block"><p><i class="fas fa-utensils"></i> &nbsp;HOME</p></div></a>
+            <a href="#profile"><div class="footer-block bck-green"><p><i class="fas fa-smile-wink"></i> &nbsp;PROFILE</p></div></a>
+        </div>
+    </div>
+</div>
+
+
+<!--**** vegetable-->
+<div data-role="page" id="vegetable">
+    <div class="header">
+        <div class="menu-bar">
+            <a href="#nav-panel-vegetable">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+        </div>
+        <div class="averta"><a href="#edit"><i class="fas fa-plus-circle fa-2x"></i></a></div>
+    </div>
+
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel-vegetable" data-theme="a">
+        <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+            <li data-icon="delete" style="background-color:#111;">
+                <a href="#" data-rel="close">Close menu</a>
+            </li>
+            <li><a href="#storageFridge"><i class="fas fa-pizza-slice"></i> - Fridge storage</a></li>
+            <li><a href="#storageFreezer"><i class="fas fa-ice-cream"></i> - Freezer storage</a></li>
+            <li><a href=""><i class="fas fa-cog"></i> - Setting</a></li>
+            <li><a href=""><i class="fas fa-question-circle"></i> - Help</a></li>
+        </ul>
+    </div>
+    <!--menu done-->
+
+    <div data-role="content">
+        <h1 class="text-center">Vegetable</h1>
+        <a href="#detail">
+            <div class="alert-item">
+                <div class="alert-item-img"><img src="image/icon10.png" alt="tomato"></div>
+                <div class="alert-item-text">Tomato <br> Qty: 2 <br> 1 day left</div>
+                <div class="alert-item-right in-orange"><i class="fas fa-chevron-circle-right fa-lg"></i></div>
+            </div>
+        </a>
+        <div class="alert-item">
+            <div class="alert-item-img"><img src="image/icon11.png" alt="cucmber"></div>
+            <div class="alert-item-text">Cucmber <br> Qty: 1 <br> 4 day left</div>
+            <div class="alert-item-right in-green"><i class="fas fa-chevron-circle-right fa-lg"></i></div>
+        </div>
+        <div class="alert-item">
+            <div class="alert-item-img"><img src="image/icon2.png" alt="Lettuce"></div>
+            <div class="alert-item-text">Lettuce <br> Qty: 1 <br> 4 day left</div>
+            <div class="alert-item-right in-green"><i class="fas fa-chevron-circle-right fa-lg"></i></div>
+        </div>
+
+        <div class="alert-description">
+            <h2>Vegetable Storage Tips</h2>
+            <p>
+                The crisper has the highest humidity. It is suitable for storing vegetables such as green leafy vegetables, peppers, and broccoli. This type of food can be kept for up to 1 week.
+            </p>
+        </div>
+
+        <div class="footer">
+            <a href="javascript:history.go(-1)"><div class="footer-block"><p><i class="fas fa-angle-double-left"></i> &nbsp;BACK</p></div></a>
+            <a href="#homeMenu"><div class="footer-block"><p><i class="fas fa-utensils"></i> &nbsp;HOME</p></div></a>
+            <a href="#profile"><div class="footer-block"><p><i class="fas fa-smile-wink"></i> &nbsp;PROFILE</p></div></a>
+        </div>
+    </div>
+</div>
+    
+<!--*** alert-->
+<div data-role="page" id="alert">
+    <div class="header">
+        <div class="menu-bar">
+            <a href="#nav-panel-alert">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+        </div>
+        <!--<div class="averta"><a href=""><i class="fas fa-plus-circle fa-2x"></i></a></div>-->
+    </div>
+
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel-alert" data-theme="a">
+        <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+            <li data-icon="delete" style="background-color:#111;">
+                <a href="#" data-rel="close">Close menu</a>
+            </li>
+            <li><a href="#storageFridge"><i class="fas fa-pizza-slice"></i> - Fridge storage</a></li>
+            <li><a href="#storageFreezer"><i class="fas fa-ice-cream"></i> - Freezer storage</a></li>
+            <li><a href=""><i class="fas fa-cog"></i> - Setting</a></li>
+            <li><a href=""><i class="fas fa-question-circle"></i> - Help</a></li>
+        </ul>
+    </div>
+    <!--menu done-->
+
+    <div data-role="content">
+        <h1 class="text-center">Alert</h1>
+        <a href="#detail">
+            <div class="alert-item">
+                <div class="alert-item-img"><img src="image/icon10.png" alt=""></div>
+                <div class="alert-item-text">Tomato <br> Qty: 2 <br> 1 day left</div>
+                <div class="alert-item-right in-orange"><i class="fas fa-chevron-circle-right fa-lg"></i></div>
+            </div>
+        </a>
+        <div class="alert-item">
+            <div class="alert-item-img"><img src="image/icon3.png" alt=""></div>
+            <div class="alert-item-text">Parmesan cheese <br> Qty: 1 <br> 3 day left</div>
+            <div class="alert-item-right in-yellow"><i class="fas fa-chevron-circle-right fa-lg"></i></div>
+        </div>
+        <div class="alert-item">
+            <div class="alert-item-img"><img src="image/icon6.png" alt=""></div>
+            <div class="alert-item-text">Milk <br> Qty: 1 <br> 3 day left</div>
+            <div class="alert-item-right in-yellow"><i class="fas fa-chevron-circle-right fa-lg"></i></div>
+        </div>
+
+        <div class="alert-description">
+            <h2>Health Tips</h2>
+            <p>When the bullet point turns yellow it will transfer to the alert page. When it turns orange, it means that only left one day.
+                <br>
+                <br>1. In order to maintain your health, please eat Aathese foods within 3 days.
+                <br>
+                2. Frozen storage the meat can delay  Aastorage time.</p>
+        </div>
+        <br><br><br><br><br><br><br><br>
+
+        <div class="footer">
+            <a href="javascript:history.go(-1)"><div class="footer-block"><p><i class="fas fa-angle-double-left"></i> &nbsp;BACK</p></div></a>
+            <a href="#homeMenu"><div class="footer-block"><p><i class="fas fa-utensils"></i> &nbsp;HOME</p></div></a>
+            <a href="#profile"><div class="footer-block"><p><i class="fas fa-smile-wink"></i> &nbsp;PROFILE</p></div></a>
+        </div>
+    </div>
+</div>
+
+
+
+<!--**** detail-->
+<div data-role="page" id="detail">
+    <div class="header">
+        <div class="menu-bar">
+            <a href="#nav-panel-detail">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+        </div>
+        <!--<div class="averta"><a href=""><i class="fas fa-plus-circle fa-2x"></i></a></div>-->
+    </div>
+
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel-detail" data-theme="a">
+        <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+            <li data-icon="delete" style="background-color:#111;">
+                <a href="#" data-rel="close">Close menu</a>
+            </li>
+            <li><a href="#storageFridge"><i class="fas fa-pizza-slice"></i> - Fridge storage</a></li>
+            <li><a href="#storageFreezer"><i class="fas fa-ice-cream"></i> - Freezer storage</a></li>
+            <li><a href=""><i class="fas fa-cog"></i> - Setting</a></li>
+            <li><a href=""><i class="fas fa-question-circle"></i> - Help</a></li>
+        </ul>
+    </div>
+    <!--menu done-->
+
+    <div data-role="content">
+        <div class="detail-info">
+            <div class="detail-pic"><img src="image/Logo2.png" alt="detail-pic"></div>
+            <div class="detail-name">
+                <h1>Food Name</h1>
+                <p><b class="in-orange">Tomato</b></p>
+            </div>
+        </div>
+
+        Storage Qty:
+        <select>
+            <option>1</option>
+            <option selected="selected">2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+
+        <p>Storage Date: <input type="text" id="datepicker"></p>
+        <p>Storage Place: </p>
+        <div id="tabs">
+            <ul class="storage-place">
+                <li><a href="#tabs-1">Fridge</a></li>
+                <li><a href="#tabs-2">Freezer</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>
+                    Keeping foods chilled properly helps them last longer and stay fresher. To ensure that your refrigerator is doing its job, it's important to keep its temperature at 40 °F or below.
+                </p>
+            </div>
+            <div id="tabs-2">
+                <p>
+                    Chilling foods to proper temperatures is one of the best ways to slow the growth of these bacteria. The freezer should be at 0 °F.
+                </p>
+            </div>
+        </div>
+
+        <br><br><br><br>
+
+        <a href="#homeMenu"><div class="storage-button bck-green" style="float: right;">Save</div></a>
+        <br><br><br><br>
+        <br><br><br><br>
+
+
+        <div class="footer">
+            <a href="javascript:history.go(-1)"><div class="footer-block"><p><i class="fas fa-angle-double-left"></i> &nbsp;BACK</p></div></a>
+            <a href="#homeMenu"><div class="footer-block"><p><i class="fas fa-utensils"></i> &nbsp;HOME</p></div></a>
+            <a href="#profile"><div class="footer-block"><p><i class="fas fa-smile-wink"></i> &nbsp;PROFILE</p></div></a>
+        </div>
+    </div>
+</div>
+    
+  
+    
+<!--**** edit-->
+<div data-role="page" id="edit">
+    <div class="header">
+        <div class="menu-bar">
+            <a href="#nav-panel-edit">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+        </div>
+        <!--<div class="averta"><a href=""><i class="fas fa-plus-circle fa-2x"></i></a></div>-->
+    </div>
+
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel-edit" data-theme="a">
+        <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+            <li data-icon="delete" style="background-color:#111;">
+                <a href="#" data-rel="close">Close menu</a>
+            </li>
+            <li><a href="#storageFridge"><i class="fas fa-pizza-slice"></i> - Fridge storage</a></li>
+            <li><a href="#storageFreezer"><i class="fas fa-ice-cream"></i> - Freezer storage</a></li>
+            <li><a href=""><i class="fas fa-cog"></i> - Setting</a></li>
+            <li><a href=""><i class="fas fa-question-circle"></i> - Help</a></li>
+        </ul>
+    </div>
+    <!--menu done-->
+
+    <div data-role="content">
+        <div class="detail-info">
+            <div class="detail-pic"><img src="image/Logo2.png" alt="detail-pic"></div>
+            <!--<div class="detail-name">-->
+                <!--<h1>Food Name</h1>-->
+                <!--<p><b class="in-orange">Tomato</b></p>-->
+            <!--</div>-->
+        </div>
+        <p>Food name: &nbsp;&nbsp;&nbsp;<input type="text" class=""></p>
+        Storage Qty:
+        <select>
+            <option selected="selected">0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+
+        <p>Storage Date: <input type="text" class="datepicker"></p>
+        <p>Storage Place: </p>
+        <div id="tabsB">
+            <ul class="storage-place">
+                <li><a href="#tabsB-1">Fridge</a></li>
+                <li><a href="#tabsB-2">Freezer</a></li>
+            </ul>
+            <div id="tabsB-1">
+                <p>
+                    Keeping foods chilled properly helps them last longer and stay fresher. To ensure that your refrigerator is doing its job, it's important to keep its temperature at 40 °F or below.
+                </p>
+            </div>
+            <div id="tabsB-2">
+                <p>
+                    Chilling foods to proper temperatures is one of the best ways to slow the growth of these bacteria. The freezer should be at 0 °F.
+                </p>
+            </div>
+        </div>
+
+        <br><br><br><br>
+
+        <a href="#homeMenu"><div class="storage-button bck-grey" style="float: right;">Eat</div></a> <a
+            href="#homeMenu"><div class="storage-button bck-green" style="float: right;">Save</div></a>
+        <br><br><br><br><br><br><br><br>
+
+        <div class="footer">
+            <a href="javascript:history.go(-1)"><div class="footer-block"><p><i class="fas fa-angle-double-left"></i> &nbsp;BACK</p></div></a>
+            <a href="#homeMenu"><div class="footer-block"><p><i class="fas fa-utensils"></i> &nbsp;HOME</p></div></a>
+            <a href="#profile"><div class="footer-block"><p><i class="fas fa-smile-wink"></i> &nbsp;PROFILE</p></div></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script
+        src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+        integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+        crossorigin="anonymous"></script>
+<!--<script src="jquery-ui-map-3/ui/min/jquery.ui.map.full.min.js"></script>-->
+
+<script src="jQuery%20UI%20Touch%20Punch.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+
+
+</body>
+</html>
